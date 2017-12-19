@@ -35,3 +35,7 @@ exports.signup = function (req, res, next) {
 		return res.send({token: tokenForUser(user)});
 	});
 }
+
+exports.signin = function(req, res, next) {
+	res.send({token: tokenForUser(req.user)});
+}
